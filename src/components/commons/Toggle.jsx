@@ -1,0 +1,10 @@
+import React from 'react'
+
+export const Toggle = () => {
+  return (
+    <label for="check" className="relative border-2 border-custom-black h-8 w-16 rounded-full block cursor-pointer">
+    <input type="checkbox" id="check" className="sr-only peer"></input>
+    <span className="w-6 h-6 bg-custom-orange absolute rounded-full left-1 top-0.5 peer-checked:bg-custom-lilac peer-checked:left-8 transition-all duration-500" ></span>
+  </label>
+  )
+}

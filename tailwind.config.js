@@ -14,7 +14,9 @@ module.exports = {
         sans: ["var(--font-archivo)", ...fontFamily.sans],
       },
       colors: {
-        custom: "#161413",
+        "custom-lilac": "#C19FEF",
+        "custom-orange": "#FDA135",
+        "custom-black": "#161413",
       },
     },
   },
