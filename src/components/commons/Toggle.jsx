@@ -9,14 +9,13 @@ export const Toggle = () => {
   const dispatch = useDispatch();
 
   const toggleDarkMode = () => {
-    console.log(theme)
     const newTheme = theme === 'light' ? 'dark' : 'light'
     dispatch(setTheme(newTheme))
   };
 
   return (
     <button onClick={toggleDarkMode}>
-      {theme === 'dark' ? <FiSun size={20}  className="mt-1"/> : <BiMoon size={20} className="mt-1"/>}
+      {theme === 'dark' ? <FiSun size={22}  className="mt-1"/> : <BiMoon size={22} className="mt-1"/>}
     </button>
   );
 };
