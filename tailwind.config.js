@@ -17,6 +17,7 @@ module.exports = {
         "custom-lilac": "#C19FEF",
         "custom-orange": "#FDA135",
         "custom-black": "#161413",
+        "custom-base": "#EEEDE9"
       },
     },
   },
