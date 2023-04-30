@@ -6,13 +6,22 @@ import { Toggle } from "./commons/Toggle";
 import { HiMenu } from "react-icons/hi";
 import { GrClose, GrGithub, GrLinkedin } from "react-icons/gr";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { NavCircle } from "@/illustrations/NavCircle";
 
 const Navbar = () => {
   const theme = useSelector((state) => state.theme.mode);
   const [nav, setNav] = useState(false);
+  const [selectedNavItem, setSelectedNavItem] = useState(null);
+
+  const navItems = [
+    { name: "about" },
+    { name: "work" },
+    { name: "skills" },
+    { name: "contact" },
+  ];
 
   return (
-    <div className="fixed w-full h-20 z-50 border-b-2 border-custom-black">
+    <div className="fixed w-full h-20 z-50 border-b-2 border-custom-black bg-custom-base">
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-10">
         <Image
           src="/../public/assets/logo.png"
@@ -20,20 +29,22 @@ const Navbar = () => {
           width="70"
           height="50"
           className="mx-4"
+          onClick={() => setSelectedNavItem(null)}
         />
         <ul className="hidden md:flex">
-          <Link href="/">
-            <li className="mx-20 text-2xl">about</li>
-          </Link>
-          <Link href="/">
-            <li className="mx-20 text-2xl">work</li>
-          </Link>
-          <Link href="/">
-            <li className="mx-20 text-2xl">skills</li>
-          </Link>
-          <Link href="/">
-            <li className="mx-20 text-2xl">contact</li>
-          </Link>
+          {navItems.map((item) => (
+            <Link href="/">
+              <li
+                className="mx-20 text-2xl relative"
+                onClick={() => setSelectedNavItem(item.name)}
+              >
+                {item.name}
+                {selectedNavItem === item.name && (
+                  <NavCircle className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                )}
+              </li>
+            </Link>
+          ))}
         </ul>
         <div className="mx-4 md:hidden">
           <HiMenu size={32} onClick={() => setNav(true)} />
@@ -64,38 +75,16 @@ const Navbar = () => {
             </div>
             <div className="m-12 flex flex-col items-center text-center">
               <ul>
-                <Link href="/">
-                  <li>
-                    <div className="py-2">
-                      <div className="text-custom-lilac">001</div>
-                      <div className="text-xl">about</div>
-                    </div>
-                  </li>
-                </Link>
-                <Link href="/">
-                  <li>
-                    <div className="py-2">
-                      <div className="text-custom-lilac">002</div>
-                      <div className="text-xl">work</div>
-                    </div>
-                  </li>
-                </Link>
-                <Link href="/">
-                  <li>
-                    <div className="py-2">
-                      <div className="text-custom-lilac">003</div>
-                      <div className="text-xl">skills</div>
-                    </div>
-                  </li>
-                </Link>
-                <Link href="/">
-                  <li>
-                    <div className="py-2">
-                      <div className="text-custom-lilac">004</div>
-                      <div className="text-xl">contact</div>
-                    </div>
-                  </li>
-                </Link>
+                {navItems.map((item, i) => (
+                  <Link href="/">
+                    <li>
+                      <div className="py-2">
+                        <div className="text-custom-lilac">{`00${i + 1}`}</div>
+                        <div className="text-xl">{item.name}</div>
+                      </div>
+                    </li>
+                  </Link>
+                ))}
               </ul>
             </div>
             <div className="pt-12">
