@@ -19,6 +19,7 @@ module.exports = {
         "custom-black": "#161413",
         "custom-base": "#EEEDE9"
       },
+      
     },
   },
   plugins: [],
