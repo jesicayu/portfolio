@@ -31,7 +31,6 @@ const Main = () => {
         <MainArrow className="h-28 md:h-40"/>
       </div>
       
-   
   );
 };
 

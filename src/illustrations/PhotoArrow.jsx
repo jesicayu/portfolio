@@ -1,12 +1,12 @@
 import React from "react";
 
-export const PhotoArrow = () => {
+export const PhotoArrow = ({className}) => {
   return (
     <svg
-      className="fill-custom-lilac"
+      className={`fill-custom-lilac ${className}`}
       id="uuid-74ee1198-c0a5-4d2f-b79c-c6cff9aa116a"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 136.51 308.52"
+      viewBox="0 0 120 308.52"
     >
       <path
         class="uuid-366fe0e6-dd85-4232-aff2-e510966891c1"
