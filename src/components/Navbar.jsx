@@ -95,8 +95,15 @@ const Navbar = () => {
                 Let's connect
               </p>
               <div className="flex justify-between items-center pt-6">
-                <GrGithub size={24} />
-                <GrLinkedin size={24} />
+                <a href="https://github.com/jesicayu" target="_blank">
+                  <GrGithub size={24} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/jesica-yu/"
+                  target="_blank"
+                >
+                  <GrLinkedin size={24} />
+                </a>
                 <BsFillPersonLinesFill size={24} />
               </div>
             </div>

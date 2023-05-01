@@ -10,8 +10,10 @@ module.exports = {
     "./src/illustrations/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      md: "830px",
+    },
     extend: {
-     
       fontFamily: {
         sans: ["var(--font-archivo)", ...fontFamily.sans],
       },
@@ -19,9 +21,8 @@ module.exports = {
         "custom-lilac": "#C19FEF",
         "custom-orange": "#FDA135",
         "custom-black": "#161413",
-        "custom-base": "#EEEDE9"
+        "custom-base": "#EEEDE9",
       },
-      
     },
   },
   plugins: [],
