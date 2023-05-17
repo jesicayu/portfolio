@@ -32,8 +32,6 @@ const About = () => {
           <p className="text-custom-lilac text-4xl">001</p>
           <p className="text-custom-black text-6xl md:text-7xl">ABOUT</p>
           <div className="w-full md:max-w-xl">
-           
-          
             {content[0].text.split("\n").map((paragraph) => {
               return (
                 <p className="text-custom-black text-justify md:text-right mb-3">
