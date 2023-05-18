@@ -20,33 +20,34 @@ const Work = () => {
       {workContent.map((project, i) => (
         <div className="flex w-full">
           <div
-            className={`flex ${
-              selected ? "w-full" : "w-2/3"
-            } ${i ===0 ? "border-t-2" : "" } cursor-pointer  border-b-2 mx-12 border-custom-black p-4 transition-all duration-700 ease-out`}
-            onClick={toggle}
+            className={`flex ${selected ? "w-full" : "w-2/3"} ${
+              i === 0 ? "border-t-2" : ""
+            }   border-b-2 mx-12 border-custom-black p-4 transition-all duration-700 ease-out`}
           >
-            <span className="text-6xl mr-4">{selected ? "-" : "+"}</span>
-            <div className="flex flex-col w-2/3">
-              <div className="flex justify-between w-full">
-                <div className="flex flex-col">
-                  <span className="text-6xl font-extralight mb-2">
-                    {project.title}
-                  </span>
-                  <span className="text-6xl ">{project.type}</span>
+            <div className="flex w-2/3 cursor-pointer" onClick={toggle}>
+              <span className="text-6xl mr-4">{selected ? "-" : "+"}</span>
+              <div className="flex flex-col">
+                <div className="flex justify-between w-full">
+                  <div className="flex flex-col">
+                    <span className="text-6xl font-extralight mb-2">
+                      {project.title}
+                    </span>
+                    <span className="text-6xl ">{project.type}</span>
+                  </div>
+                  <Image
+                    src={`/../public/assets/${project.image}.png`}
+                    width="150"
+                    height="150"
+                    className={`grayscale border hover:grayscale-0 border-black ${
+                      selected ? "" : "hidden"
+                    }`}
+                  />
                 </div>
-                <Image
-                  src={`/../public/assets/${project.image}.png`}
-                  width="150"
-                  height="150"
-                  className={`grayscale border border-black ${
-                    selected ? "" : "hidden"
-                  }`}
-                />
-              </div>
-              <div className={`flex w-full mt-4 ${selected ? "" : "hidden"}`}>
-                <p className="font-extralight italic text-justify">
-                  {project.text}
-                </p>
+                <div className={`flex w-full mt-4 ${selected ? "" : "hidden"}`}>
+                  <p className="font-extralight italic text-justify">
+                    {project.text}
+                  </p>
+                </div>
               </div>
             </div>
             <div className="flex flex-col w-1/3 justify-between items-end">
@@ -56,7 +57,9 @@ const Work = () => {
               </div>
               <div className="flex items-end">
                 <p className="font-extralight">PROJECT DETAILS</p>
-                <NewPageArrow className="w-24" />
+                <a href={`https://github.com/${project.github}`} target="_blank">
+                  <NewPageArrow className="w-24" />
+                </a>
               </div>
             </div>
           </div>
