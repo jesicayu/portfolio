@@ -33,4 +33,5 @@ export const workContent = [
     github: "jesicayu/TMDB",
     text: "A movies and series platform where users can browse movies and TV shows and log in to manage their favorites. The homepage displays a selection of featured media, enabling users to discover new titles, as well as a search feature where users can filter their search by movies or shows. To create their own personalized collection, users can favorite and unfavorite items, which are displayed in a separate page and categorized by media type. All favorite selections are stored in the database. To provide up-to-date information, the platform’s API integrates with TMDB’s API.",
   },
+ 
 ];

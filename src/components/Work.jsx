@@ -4,11 +4,22 @@ import { NewPageArrow } from "@/illustrations/NewPageArrow";
 import { workContent } from "@/text";
 
 const Work = () => {
-  const [selected, setSelected] = useState(false);
+  const [selected, setSelected] = useState(null);
 
-  const toggle = () => {
-    setSelected(!selected);
+  const toggle = (i) => {
+    if(selected === i){
+     return setSelected(null);
+    }
+    setSelected(i)
   };
+
+ const  calculateTopOffsets = (totalItems) => {
+  const offsetStep = 0.5; 
+  const topOffsets = Array(totalItems).fill().map((_, i) => offsetStep * (totalItems - i - 1));
+  return topOffsets;
+}
+
+const topOffsets = calculateTopOffsets(workContent.length);
 
   return (
     <div className="w-full">
@@ -18,14 +29,14 @@ const Work = () => {
       </div>
 
       {workContent.map((project, i) => (
-        <div className="flex w-full">
+        <div className="flex w-full ">
           <div
-            className={`flex ${selected ? "w-full" : "w-2/3"} ${
-              i === 0 ? "border-t-2" : ""
-            }   border-b-2 mx-12 border-custom-black p-4 transition-all duration-700 ease-out`}
+            className={`flex ${selected ===i ? "w-full" : "w-2/3"} border-b-2 border-t-2 mx-12 border-custom-black ${
+              `relative top-${topOffsets[i]}`
+            }  p-4 transition-all duration-700 ease-out`}
           >
-            <div className="flex w-2/3 cursor-pointer" onClick={toggle}>
-              <span className="text-6xl mr-4">{selected ? "-" : "+"}</span>
+            <div className="flex w-2/3 cursor-pointer" onClick={()=>toggle(i)}>
+              <span className="text-6xl mr-4">{selected===i ? "-" : "+"}</span>
               <div className="flex flex-col">
                 <div className="flex justify-between w-full">
                   <div className="flex flex-col">
@@ -39,11 +50,11 @@ const Work = () => {
                     width="150"
                     height="150"
                     className={`grayscale border hover:grayscale-0 border-black ${
-                      selected ? "" : "hidden"
+                      selected===i ? "" : "hidden"
                     }`}
                   />
                 </div>
-                <div className={`flex w-full mt-4 ${selected ? "" : "hidden"}`}>
+                <div className={`flex w-full mt-4 ${selected===i ? "" : "hidden"}`}>
                   <p className="font-extralight italic text-justify">
                     {project.text}
                   </p>
@@ -65,6 +76,7 @@ const Work = () => {
           </div>
         </div>
       ))}
+    
     </div>
   );
 };
