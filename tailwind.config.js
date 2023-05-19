@@ -24,6 +24,15 @@ module.exports = {
         "custom-black": "#161413",
         "custom-base": "#EEEDE9",
       },
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
+      },
+      animation: {
+        slide: 'slide 24s linear infinite',
+      }
       
     },
   },

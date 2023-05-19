@@ -31,7 +31,7 @@ const Navbar = () => {
           className="mx-4"
           onClick={() => setSelectedNavItem(null)}
         />
-        <ul className="hidden md:flex">
+        <ul className="hidden md:flex ">
           {navItems.map((item) => (
             <Link href="/">
               <li
