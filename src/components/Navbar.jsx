@@ -35,7 +35,7 @@ const Navbar = () => {
           {navItems.map((item) => (
             <Link href="/">
               <li
-                className="mx-20 text-2xl relative"
+                className="md: mx-10 lg:mx-20 text-2xl relative"
                 onClick={() => setSelectedNavItem(item.name)}
               >
                 {item.name}
