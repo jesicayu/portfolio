@@ -37,19 +37,21 @@ const Skills = () => {
 
   return (
     <>
-      <div className="w-full mb-20">
-        <div className="flex items-end justify-center">
-          <p className="font-extralight italic text-sm md:text-2xl w-1/6 text-right ">
+      <div className="w-full mb-10  md:mb-20">
+        <div className="flex flex-col-reverse ml-4 md:ml-0 md:flex-row md:items-end md:justify-center ">
+          <p className="font-extralight italic text-md md:text-2xl md:w-1/6 md:text-right ">
             /* current, but not limited to */{" "}
           </p>
-          <p className="text-custom-black text-center text-6xl mx-8 md:text-7xl">
+          <div className="flex flex-col-reverse md:flex-row md:items-end">
+          <p className="text-custom-black md:text-center text-6xl md:mx-8 md:text-7xl">
             SKILLS
           </p>
           <p className="text-custom-lilac text-4xl ">003</p>
+          </div>
         </div>
       </div>
-      <div className="overflow-hidden flex-nowrap flex">
-        <div className="flex animate-slide">
+      <div className="overflow-hidden flex-nowrap flex group ">
+        <div className="flex animate-slide group-hover:pause">
         {icons.map((icon, index) => {
           const IconComponent = iconComponents[icon];
           return (
@@ -62,7 +64,7 @@ const Skills = () => {
           );
         })}
         </div>
-        <div className="flex animate-slide">
+        <div className="flex animate-slide group-hover:pause">
         {icons.map((icon, index) => {
           const IconComponent = iconComponents[icon];
           return (
@@ -76,7 +78,6 @@ const Skills = () => {
         })}
         </div>
       </div>
-    
     </>
   );
 };
