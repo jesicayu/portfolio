@@ -32,7 +32,7 @@ const Work = () => {
         </div>
         <div className="relative z-10">
           {workContent.map((project, i) => (
-            <div className="flex w-full">
+            <div className="flex w-full"   key={i}>
               <div
                 className={`flex flex-col md:flex-row w-full ${
                   selected === i && "md:w-full"
