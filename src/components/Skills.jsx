@@ -37,7 +37,7 @@ const Skills = () => {
 
   return (
     <>
-      <div className="w-full mb-10 md:mb-20">
+      <div id="skills" className="w-full mb-10 md:mb-20">
         <div className="flex flex-col-reverse ml-4 md:ml-0 md:flex-row md:items-end md:justify-center ">
           <p className="font-extralight italic text-md md:text-2xl md:w-1/6 md:text-right ">
             /* current, but not limited to */{" "}
@@ -50,7 +50,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden flex-nowrap flex group mb-40">
+      <div className="overflow-hidden flex-nowrap flex group mb-20 md:mb-40">
         <div className="flex animate-slide group-hover:pause">
         {icons.map((icon, index) => {
           const IconComponent = iconComponents[icon];

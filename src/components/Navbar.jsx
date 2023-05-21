@@ -33,7 +33,7 @@ const Navbar = () => {
         />
         <ul className="hidden md:flex ">
           {navItems.map((item) => (
-            <Link href="/">
+            <Link href={`/#${item.name}`} scroll={false}>
               <li
                 className="md: mx-10 lg:mx-20 text-2xl relative"
                 onClick={() => setSelectedNavItem(item.name)}

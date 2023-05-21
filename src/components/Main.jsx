@@ -3,7 +3,7 @@ import React from "react";
 
 const Main = () => {
   return (
-      <div className="flex flex-col justify-center w-full py-32 md:h-screen md:py-0">
+      <div id="main" className="flex flex-col justify-center w-full py-32 md:h-screen md:py-0">
         <div className="mt-30 md:mt-48 w-full tracking-wide  text-custom-black  text-2xl md:text-4xl lg:text-6xl">
           <div className="border-b-2 border-custom-black md:pr-64 py-4 font-black text-center">
             <span className="mr-4 md:mr-12">/* software</span>
