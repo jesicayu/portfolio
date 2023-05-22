@@ -8,7 +8,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const About = () => {
   return (
-    <div id="about" className="w-full md:h-screen md:mb-40">
+    <div id="about" className="w-full scroll-mt-32 md:h-screen md:mb-40">
       <div className="md:flex justify-between">
         <div className="hidden md:flex flex-col items-center mt-20">
           <PhotoArrow className="h-40 rotate-90 ml-16" />
@@ -47,7 +47,12 @@ const About = () => {
             <a href="https://www.linkedin.com/in/jesica-yu/" target="_blank">
               <GrLinkedin size={36} />
             </a>
-            <BsFillPersonLinesFill size={36} />
+            <a
+                  href="https://drive.google.com/file/d/17rATEnUgBMVAUVR_WxBnTJUXBTk4NrJK/view?usp=share_link"
+                  target="_blank"
+                >
+                  <BsFillPersonLinesFill size={36} />
+                </a>
           </div>
         </div>
       </div>

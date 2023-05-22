@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   SiPostgresql,
   SiMongodb,
@@ -35,9 +35,10 @@ const Skills = () => {
     SiSocketdotio:SiSocketdotio
   };
 
+
   return (
     <>
-      <div id="skills" className="w-full mb-10 md:mb-20">
+      <div id="skills" className="scroll-my-32 w-full mb-10 md:mb-20">
         <div className="flex flex-col-reverse ml-4 md:ml-0 md:flex-row md:items-end md:justify-center ">
           <p className="font-extralight italic text-md md:text-2xl md:w-1/6 md:text-right ">
             /* current, but not limited to */{" "}
@@ -83,3 +84,10 @@ const Skills = () => {
 };
 
 export default Skills;
+
+ // useEffect(() => {
+  //   const skillsSection = document.getElementById('skills');
+  //   if (skillsSection) {
+  //     skillsSection.style.scrollMarginTop = '80px'; // Adjust this value according to your needs
+  //   }
+  // }, []);

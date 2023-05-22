@@ -23,21 +23,25 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-20 z-50 border-b-2 border-custom-black bg-custom-base">
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-10">
-        <Image
-          src="/../public/assets/logo.png"
-          alt="logo"
-          width="70"
-          height="50"
-          className="mx-4"
-          onClick={() => setSelectedNavItem(null)}
-        />
+        <Link href={"/#main"} scroll={false}>
+          <Image
+            src="/../public/assets/logo.png"
+            alt="logo"
+            width="70"
+            height="50"
+            className="mx-4"
+            onClick={() => setSelectedNavItem(null)}
+          />
+        </Link>
+
         <ul className="hidden md:flex ">
           {navItems.map((item) => (
-            <Link href={`/#${item.name}`} scroll={false}>
-              <li
-                className="md: mx-10 lg:mx-20 text-2xl relative"
-                onClick={() => setSelectedNavItem(item.name)}
-              >
+            <Link
+              href={`/#${item.name}`}
+              scroll={false}
+              onClick={() => setSelectedNavItem(item.name)}
+            >
+              <li className="md: mx-10 lg:mx-20 text-2xl relative">
                 {item.name}
                 {selectedNavItem === item.name && (
                   <NavCircle className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
@@ -76,7 +80,7 @@ const Navbar = () => {
             <div className="m-12 flex flex-col items-center text-center">
               <ul>
                 {navItems.map((item, i) => (
-                  <Link href="/">
+                  <Link href={`/#${item.name}`}>
                     <li>
                       <div className="py-2">
                         <div className="text-custom-lilac">{`00${i + 1}`}</div>
@@ -104,7 +108,12 @@ const Navbar = () => {
                 >
                   <GrLinkedin size={24} />
                 </a>
-                <BsFillPersonLinesFill size={24} />
+                <a
+                  href="https://drive.google.com/file/d/17rATEnUgBMVAUVR_WxBnTJUXBTk4NrJK/view?usp=share_link"
+                  target="_blank"
+                >
+                  <BsFillPersonLinesFill size={24} />
+                </a>
               </div>
             </div>
           </div>

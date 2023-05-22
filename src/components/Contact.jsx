@@ -11,7 +11,10 @@ const Contact = () => {
   const message = useInput();
 
   return (
-    <div id="contact" className="w-full flex flex-col md:flex-row relative">
+    <div
+      id="contact"
+      className="w-full flex flex-col scroll-mt-32 md:flex-row relative"
+    >
       <div className="flex flex-col ml-4 md:ml-0 md:items-end md:text-right md:w-2/5 z-20 ">
         <p className="text-custom-black w-1/2 order-2 text-6xl md:text-7xl md:order-1">
           LET'S MEET
@@ -28,7 +31,12 @@ const Contact = () => {
           <a href="https://www.linkedin.com/in/jesica-yu/" target="_blank">
             <GrLinkedin size={36} />
           </a>
-          <BsFillPersonLinesFill size={36} />
+          <a
+            href="https://drive.google.com/file/d/17rATEnUgBMVAUVR_WxBnTJUXBTk4NrJK/view?usp=share_link"
+            target="_blank"
+          >
+            <BsFillPersonLinesFill size={36} />
+          </a>
         </div>
       </div>
       <div className=" border-custom-black border-t-2 mt-12 md:mt-0 md:border-l-2 md:w-3/5 md:ml-16 z-0">
@@ -66,13 +74,14 @@ const Contact = () => {
             />
           </div>
           <div className="w-full flex justify-end">
-          <button type="submit" className="flex items-end">
-            <p className="font-extralight text-sm md:text-base mb-2">SUBMIT</p>
-            <NewPageArrow className="w-24 h-24 -rotate-90 m-2" />
-          </button>
-        </div>
+            <button type="submit" className="flex items-end">
+              <p className="font-extralight text-sm md:text-base mb-2">
+                SUBMIT
+              </p>
+              <NewPageArrow className="w-24 h-24 -rotate-90 m-2" />
+            </button>
+          </div>
         </form>
-        
       </div>
       <ContactArrow className="absolute hidden lg:block w-2/5 bottom-0 left-20 z-10" />
     </div>

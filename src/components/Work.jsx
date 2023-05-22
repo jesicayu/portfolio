@@ -25,7 +25,7 @@ const Work = () => {
 
   return (
     <>
-      <div id="work" className="w-full mb-10 md:mb-40">
+      <div id="work" className="w-full scroll-mt-32 mb-10 md:mb-40">
         <div className="flex flex-col mr-4 ml-4 mt-12 md:items-start md:ml-12">
           <p className="text-custom-lilac text-4xl">002</p>
           <p className="text-custom-black text-6xl mb-4 md:text-7xl">WORK</p>
