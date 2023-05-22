@@ -12,6 +12,18 @@ import { Logo } from "@/illustrations/Logo";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [selectedNavItem, setSelectedNavItem] = useState(null);
+  const [isDarkMode, setIsDarkMode] = useState(false)
+
+  const toggleDarkMode = () => {
+   setIsDarkMode(!isDarkMode);
+   if(!isDarkMode){
+    document.documentElement.classList.add('dark')
+   } else {
+    document.documentElement.classList.remove('dark')
+   }
+
+  };
+
 
   const navItems = [
     { name: "about" },
@@ -48,10 +60,10 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="mx-4 md:hidden">
-          <HiMenu size={32} onClick={() => setNav(true)} className="fill-custom-black dark:fill-custom-dark-white" />
+          <HiMenu size={32} onClick={() => setNav(true)} className="fill-custom-black dark:fill-custom-dark-white cursor-pointer" />
         </div>
         <div className="mx-4 px-4 hidden md:block">
-          <Toggle />
+          <Toggle toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode}/>
         </div>
       </div>
 
@@ -71,8 +83,8 @@ const Navbar = () => {
         >
           <div>
             <div className="flex align-center justify-between">
-              <Toggle />
-              <MdClose size={32} onClick={() => setNav(false)} className="fill-custom-black dark:fill-custom-dark-white"/>
+              <Toggle toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+              <MdClose size={32} onClick={() => setNav(false)} className="cursor-pointer fill-custom-black dark:fill-custom-dark-white"/>
             </div>
             <div className="m-12 flex flex-col items-center text-center">
               <ul>

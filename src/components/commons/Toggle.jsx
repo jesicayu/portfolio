@@ -2,18 +2,7 @@ import React, { useState } from 'react'
 import { BiMoon } from "react-icons/bi";
 import { FiSun } from "react-icons/fi";
 
-export const Toggle = () => {
-const [isDarkMode, setIsDarkMode] = useState(false)
-
-  const toggleDarkMode = () => {
-   setIsDarkMode(!isDarkMode);
-   if(!isDarkMode){
-    document.documentElement.classList.add('dark')
-   } else {
-    document.documentElement.classList.remove('dark')
-   }
-
-  };
+export const Toggle = ({toggleDarkMode, isDarkMode}) => {
 
   return (
     <button onClick={toggleDarkMode}>

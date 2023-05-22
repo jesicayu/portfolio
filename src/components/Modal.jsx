@@ -9,7 +9,7 @@ const Modal = ({toggleModal}) => {
       
       onClick={(e) => e.stopPropagation()}>
         <div className="self-end cursor-pointer fill-white">
-          <MdClose size={36} onClick={toggleModal} className="fill-custom-black dark:fill-custom-dark-white"/>
+          <MdClose size={36} onClick={toggleModal} className=" fill-custom-black dark:fill-custom-dark-white"/>
         </div>
         <div className="w-full text-center space-y-4 mt-4 ">
           <p className="text-lg lg:text-xl mx-4 dark:text-custom-dark-white lg:mx-12">
