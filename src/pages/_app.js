@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import store from '@/state/store'
 
 const archivo = Archivo({
-  weight: ['200', '500','900'],
+  weight: ['200','500','900'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   variable: '--font-archivo'

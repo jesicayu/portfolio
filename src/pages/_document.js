@@ -5,8 +5,6 @@ export default function Document() {
     <Html lang="en" className='scroll-smooth'>
       <Head />
       <body className='h-screen scrollbar-thin 
-      s
-    
       scrollbar-thumb-custom-orange scrollbar-track-custom-orange/50'>
         <Main />
         <NextScript />
