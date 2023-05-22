@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 
+
 @layer base {
   body {
     background-color: #EEEDE9;
     color: #161413;
   }
+
 }
 
 @layer utilities {

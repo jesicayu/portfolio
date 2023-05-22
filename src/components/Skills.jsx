@@ -40,11 +40,11 @@ const Skills = () => {
     <>
       <div id="skills" className="scroll-my-32 w-full mb-10 md:mb-20">
         <div className="flex flex-col-reverse ml-4 md:ml-0 md:flex-row md:items-end md:justify-center ">
-          <p className="font-extralight italic text-md md:text-2xl md:w-1/6 md:text-right ">
+          <p className="font-extralight italic text-md text-custom-black dark:text-custom-dark-white md:text-2xl md:w-1/6 md:text-right ">
             /* current, but not limited to */{" "}
           </p>
           <div className="flex flex-col-reverse md:flex-row md:items-end">
-          <p className="text-custom-black md:text-center text-6xl md:mx-8 md:text-7xl">
+          <p className="text-custom-black dark:text-custom-dark-white md:text-center text-6xl md:mx-8 md:text-7xl">
             SKILLS
           </p>
           <p className="text-custom-lilac text-4xl ">003</p>
@@ -58,9 +58,9 @@ const Skills = () => {
           return (
             <div
               key={index}
-              className="border-2 border-custom-black w-28 h-28 p-4 flex-none"
+              className="border-2 border-custom-black dark:border-custom-dark-white w-28 h-28 p-4 flex-none"
             >
-              <IconComponent className="fill-custom-black w-full h-full" />
+              <IconComponent className="fill-custom-black dark:fill-custom-dark-white w-full h-full" />
             </div>
           );
         })}
@@ -71,9 +71,9 @@ const Skills = () => {
           return (
             <div
               key={index}
-              className="border-2 border-custom-black w-28 h-28 p-4 flex-none"
+              className="border-2 border-custom-black dark:border-custom-dark-white w-28 h-28 p-4 flex-none"
             >
-              <IconComponent className="fill-custom-black w-full h-full" />
+              <IconComponent className="fill-custom-black dark:fill-custom-dark-white w-full h-full" />
             </div>
           );
         })}
@@ -85,9 +85,4 @@ const Skills = () => {
 
 export default Skills;
 
- // useEffect(() => {
-  //   const skillsSection = document.getElementById('skills');
-  //   if (skillsSection) {
-  //     skillsSection.style.scrollMarginTop = '80px'; // Adjust this value according to your needs
-  //   }
-  // }, []);
+

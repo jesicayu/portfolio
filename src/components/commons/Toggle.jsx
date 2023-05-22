@@ -1,21 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BiMoon } from "react-icons/bi";
 import { FiSun } from "react-icons/fi";
-import { useDispatch, useSelector} from 'react-redux';
-import { setTheme } from '@/state/theme';
 
 export const Toggle = () => {
-  const theme = useSelector(state => state.theme.mode)
-  const dispatch = useDispatch();
+const [isDarkMode, setIsDarkMode] = useState(false)
 
   const toggleDarkMode = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light'
-    dispatch(setTheme(newTheme))
+   setIsDarkMode(!isDarkMode);
+   if(!isDarkMode){
+    document.documentElement.classList.add('dark')
+   } else {
+    document.documentElement.classList.remove('dark')
+   }
+
   };
 
   return (
     <button onClick={toggleDarkMode}>
-      {theme === 'dark' ? <FiSun size={22}  className="mt-1"/> : <BiMoon size={22} className="mt-1"/>}
+      {isDarkMode ? <FiSun size={22} style={{color: "#FFF9F3"}}  className="mt-1"/> : <BiMoon  size={22} className="mt-1"/>}
     </button>
   );
 };

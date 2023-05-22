@@ -28,7 +28,7 @@ const Work = () => {
       <div id="work" className="w-full scroll-mt-32 mb-10 md:mb-40">
         <div className="flex flex-col mr-4 ml-4 mt-12 md:items-start md:ml-12">
           <p className="text-custom-lilac text-4xl">002</p>
-          <p className="text-custom-black text-6xl mb-4 md:text-7xl">WORK</p>
+          <p className="text-custom-black dark:text-custom-dark-white text-6xl mb-4 md:text-7xl">WORK</p>
         </div>
         <div className="relative z-10">
           {workContent.map((project, i) => (
@@ -38,7 +38,7 @@ const Work = () => {
                   selected === i && "md:w-full"
                 } ${
                   selected !== i && "md:w-2/3"
-                } border-b-2 border-t-2 lg:mx-12 border-custom-black bg-custom-base ${
+                } border-b-2 border-t-2 lg:mx-12 border-custom-black bg-custom-base dark:bg-custom-dark-base dark:border-custom-base ${
                   topOffsets[i] ? `relative top-${topOffsets[i]}` : ""
                 }  p-6 md:p-4 transition-all duration-700 ease-out`}
               >
@@ -46,16 +46,16 @@ const Work = () => {
                   className="flex w-full md:w-2/3 cursor-pointer"
                   onClick={() => toggle(i)}
                 >
-                  <span className="text-6xl mr-4">
+                  <span className="text-6xl mr-4 text-custom-black dark:text-custom-dark-white">
                     {selected === i ? "-" : "+"}
                   </span>
                   <div className="flex flex-col">
                     <div className="flex justify-between w-full">
                       <div className="flex flex-col">
-                        <span className="text-4xl md:text-6xl font-extralight mb-2">
+                        <span className="text-4xl md:text-6xl font-extralight mb-2 text-custom-black dark:text-custom-dark-white">
                           {project.title}
                         </span>
-                        <span className="text-4xl md:text-6xl">
+                        <span className="text-4xl md:text-6xl text-custom-black dark:text-custom-dark-white">
                           {project.type}
                         </span>
                       </div>
@@ -64,7 +64,7 @@ const Work = () => {
                         width="150"
                         height="150"
                         alt="cover image"
-                        className={`grayscale border hover:grayscale-0 border-black ${
+                        className={`grayscale border hover:grayscale-0 dark:border-custom-base border-black ${
                           selected === i && "md:block"
                         } hidden`}
                       />
@@ -74,7 +74,7 @@ const Work = () => {
                         selected === i ? "" : "hidden"
                       }`}
                     >
-                      <p className="font-extralight italic text-justify">
+                      <p className="font-extralight italic text-justify text-custom-black dark:text-custom-dark-white">
                         {project.text}
                       </p>
                     </div>
@@ -86,12 +86,12 @@ const Work = () => {
                       selected === i ? "ml-8" : "ml-14"
                     } md:ml-0 md:text-right text-sm md:text-base`}
                   >
-                    <p>{project.date}</p>
-                    <p>{project.duration}</p>
+                    <p className="text-custom-black dark:text-custom-dark-white">{project.date}</p>
+                    <p className="text-custom-black dark:text-custom-dark-white">{project.duration}</p>
                   </div>
                   <div className="flex items-end">
                     <p className="font-extralight text-sm md:text-base text-right">
-                      <span className="hidden md:inline">PROJECT </span>DETAILS
+                      <span className="hidden md:inline text-custom-black dark:text-custom-dark-white">PROJECT </span> <span className="text-custom-black dark:text-custom-dark-white">DETAILS</span>
                     </p>
 
                     <a

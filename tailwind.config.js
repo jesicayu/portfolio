@@ -3,6 +3,7 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
+  darkMode: 'class',
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -23,6 +24,9 @@ module.exports = {
         "custom-orange": "#FDA135",
         "custom-black": "#161413",
         "custom-base": "#EEEDE9",
+        "custom-dark-base": "#2B2B2B",
+        "custom-dark-orange": "#FFC890",
+        "custom-dark-white": "#FFF9F3"
       },
       keyframes: {
         slide: {
@@ -37,6 +41,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('tailwind-scrollbar')
+     require('tailwind-scrollbar')
   ],
 };

@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import { Toggle } from "./commons/Toggle";
 import { HiMenu } from "react-icons/hi";
-import { GrClose, GrGithub, GrLinkedin } from "react-icons/gr";
+import { GrGithub, GrLinkedin } from "react-icons/gr";
+import {MdClose} from "react-icons/md"
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { NavCircle } from "@/illustrations/NavCircle";
+import { Logo } from "@/illustrations/Logo";
 
 const Navbar = () => {
-  const theme = useSelector((state) => state.theme.mode);
   const [nav, setNav] = useState(false);
   const [selectedNavItem, setSelectedNavItem] = useState(null);
 
@@ -21,17 +21,14 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="fixed w-full h-20 z-50 border-b-2 border-custom-black bg-custom-base">
+    <div className="fixed w-full h-20 z-50 border-b-2 border-custom-black dark:border-custom-dark-white dark:bg-custom-dark-base bg-custom-base">
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-10">
-        <Link href={"/#main"} scroll={false}>
-          <Image
-            src="/../public/assets/logo.png"
-            alt="logo"
-            width="70"
-            height="50"
-            className="mx-4"
-            onClick={() => setSelectedNavItem(null)}
-          />
+        <Link
+          href="/#main"
+          scroll={false}
+          onClick={() => setSelectedNavItem(null)}
+        >
+          <Logo className="w-16 mx-4" />
         </Link>
 
         <ul className="hidden md:flex ">
@@ -41,7 +38,7 @@ const Navbar = () => {
               scroll={false}
               onClick={() => setSelectedNavItem(item.name)}
             >
-              <li className="md: mx-10 lg:mx-20 text-2xl relative">
+              <li className="md: mx-10 lg:mx-20 text-2xl relative dark:text-custom-dark-white">
                 {item.name}
                 {selectedNavItem === item.name && (
                   <NavCircle className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
@@ -51,7 +48,7 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="mx-4 md:hidden">
-          <HiMenu size={32} onClick={() => setNav(true)} />
+          <HiMenu size={32} onClick={() => setNav(true)} className="fill-custom-black dark:fill-custom-dark-white" />
         </div>
         <div className="mx-4 px-4 hidden md:block">
           <Toggle />
@@ -61,21 +58,21 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? "fixed right-0 top-0 w-full h-screen bg-custom-orange/75 md:hidden"
+            ? "fixed right-0 top-0 w-full h-screen dark:bg-custom-dark-orange/75 bg-custom-orange/75 md:hidden"
             : ""
         }
       >
         <div
           className={
             nav
-              ? "fixed right-0 top-0 h-screen w-[75%] sm:w-[60%] md:w-[45%] bg-custom-base pt-8 px-10 ease-in duration-500"
+              ? "fixed right-0 top-0 h-screen w-[75%] sm:w-[60%] md:w-[45%] bg-custom-base dark:bg-custom-dark-base pt-8 px-10 ease-in duration-500"
               : "fixed right-[-100%] pt-8 px-10 ease-in duration-500"
           }
         >
           <div>
             <div className="flex align-center justify-between">
               <Toggle />
-              <GrClose size={32} onClick={() => setNav(false)} />
+              <MdClose size={32} onClick={() => setNav(false)} className="fill-custom-black dark:fill-custom-dark-white"/>
             </div>
             <div className="m-12 flex flex-col items-center text-center">
               <ul>
@@ -84,7 +81,7 @@ const Navbar = () => {
                     <li>
                       <div className="py-2">
                         <div className="text-custom-lilac">{`00${i + 1}`}</div>
-                        <div className="text-xl">{item.name}</div>
+                        <div className="text-xl text-custom-black dark:text-custom-dark-white">{item.name}</div>
                       </div>
                     </li>
                   </Link>
@@ -94,25 +91,25 @@ const Navbar = () => {
             <div className="pt-12">
               <p
                 className="text-base
-              uppercase tracking-widest"
+              uppercase tracking-widest text-custom-black dark:text-custom-dark-white"
               >
                 Let's connect
               </p>
               <div className="flex justify-between items-center pt-6">
                 <a href="https://github.com/jesicayu" target="_blank">
-                  <GrGithub size={24} />
+                  <GrGithub size={28} className="fill-custom-black dark:fill-custom-dark-white"/>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/jesica-yu/"
                   target="_blank"
                 >
-                  <GrLinkedin size={24} />
+                  <GrLinkedin size={28} className="fill-custom-black dark:fill-custom-dark-white" />
                 </a>
                 <a
                   href="https://drive.google.com/file/d/17rATEnUgBMVAUVR_WxBnTJUXBTk4NrJK/view?usp=share_link"
                   target="_blank"
                 >
-                  <BsFillPersonLinesFill size={24} />
+                  <BsFillPersonLinesFill size={28} className="fill-custom-black dark:fill-custom-dark-white"/>
                 </a>
               </div>
             </div>
