@@ -24,7 +24,7 @@ module.exports = {
         "custom-orange": "#FDA135",
         "custom-black": "#161413",
         "custom-base": "#EEEDE9",
-        "custom-dark-base": "#2B2B2B",
+        "custom-dark-base": "#18171A",
         "custom-dark-orange": "#FFC890",
         "custom-dark-white": "#FFF9F3"
       },
