@@ -15,7 +15,7 @@ const Main = () => {
       id="main"
       className="flex flex-col justify-center w-full py-32 md:h-screen md:py-0"
     >
-      <div className="mt-30 md:mt-48 w-full tracking-wide dark:text-custom-dark-white text-custom-black  text-2xl md:text-4xl lg:text-6xl relative">
+      <div className="md:mt-32 lg:mt-48 w-full tracking-wide dark:text-custom-dark-white text-custom-black  text-2xl md:text-4xl lg:text-6xl relative">
         <div onClick={toggleModal}>
         <SurpriseMe
           className="absolute hidden text-4xl md:block w-28 lg:w-36 right-24 top-2 animate-[spin_12s_linear_infinite] cursor-pointer"

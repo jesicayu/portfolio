@@ -21,7 +21,9 @@ const About = () => {
           alt="logo"
           width="600"
           height="400"
+          priority="true"
           className="grayscale hover:grayscale-0 -mt-20 w-full md:max-w-3xl md:mx-12 md:mt-10"
+          style={{ objectFit: "contain" }}
         />
       </div>
       <div className="flex justify-end items-center">
@@ -32,9 +34,9 @@ const About = () => {
           <p className="text-custom-lilac text-4xl">001</p>
           <p className="text-custom-black dark:text-custom-dark-white text-6xl md:text-7xl">ABOUT</p>
           <div className="w-full md:max-w-xl">
-            {aboutContent[0].text.split("\n").map((paragraph) => {
+            {aboutContent[0].text.split("\n").map((paragraph,i) => {
               return (
-                <p className="text-custom-black dark:text-custom-dark-white text-justify md:text-right mb-3">
+                <p key={i} className="text-custom-black dark:text-custom-dark-white text-justify md:text-right mb-3">
                   {paragraph}
                 </p>
               );

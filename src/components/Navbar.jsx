@@ -44,13 +44,14 @@ const Navbar = () => {
         </Link>
 
         <ul className="hidden md:flex ">
-          {navItems.map((item) => (
+          {navItems.map((item,i) => (
             <Link
+            key={i}
               href={`/#${item.name}`}
               scroll={false}
               onClick={() => setSelectedNavItem(item.name)}
             >
-              <li className="md: mx-10 lg:mx-20 text-2xl relative dark:text-custom-dark-white">
+              <li  className="md: mx-10 lg:mx-20 text-2xl relative dark:text-custom-dark-white">
                 {item.name}
                 {selectedNavItem === item.name && (
                   <NavCircle className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
@@ -89,8 +90,8 @@ const Navbar = () => {
             <div className="m-12 flex flex-col items-center text-center">
               <ul>
                 {navItems.map((item, i) => (
-                  <Link href={`/#${item.name}`}>
-                    <li>
+                  <Link key={i} href={`/#${item.name}`}>
+                    <li >
                       <div className="py-2">
                         <div className="text-custom-lilac">{`00${i + 1}`}</div>
                         <div className="text-xl text-custom-black dark:text-custom-dark-white">{item.name}</div>
