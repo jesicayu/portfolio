@@ -13,11 +13,11 @@ const About = () => {
         <div className="hidden md:flex flex-col items-center mt-20">
           <PhotoArrow className="h-40 rotate-90 ml-16" />
           <p className="text-custom-orange dark:text-custom-dark-orange italic text-2xl text-right ml-12">
-            / *currently learning Typescript, Next and Data structures */
+            /* currently learning Typescript, Next and Data structures */
           </p>
         </div>
         <Image
-          src="/../public/assets/about.jpg"
+          src="/assets/about.jpg"
           alt="logo"
           width="600"
           height="400"
