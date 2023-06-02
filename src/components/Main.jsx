@@ -29,7 +29,7 @@ const Main = () => {
           <span className="ml-2 md:ml-16 md:mr-40">with</span>
         </div>
         <div className="border-b-2 dark:border-custom-dark-white border-custom-black py-4 text-center">
-          <span className="ml-2 md:mx-16">a</span>
+          <span className="ml-2 mr-4 md:mx-16">a</span>
           <span className="font-black mr-4 md:mr-16">systemic</span>
           <span className="font-black md:mr-16 ">mindset</span>
           <span className="ml-4 md:mr-24">and</span>
