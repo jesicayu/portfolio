@@ -11,7 +11,7 @@ const archivo = Archivo({
 export default function App({ Component, pageProps }) {
   return (
     
-  <main className={`${archivo.variable} font-sans`}>
+  <main className={`${archivo.variable} font-sans `}>
   <Component {...pageProps} />
   </main>
   )

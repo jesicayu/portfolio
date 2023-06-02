@@ -17,25 +17,33 @@ const Contact = () => {
     >
       <div className="flex flex-col ml-4 md:ml-0 md:items-end md:text-right md:w-2/5 z-20 ">
         <p className="text-custom-black dark:text-custom-dark-white w-1/2 order-2 text-6xl md:text-7xl md:order-1">
-          LET'S MEET
+          LET&apos;S MEET
         </p>
         <p className="text-custom-lilac order-1 text-4xl">004</p>
         <p className="font-extralight italic text-custom-black dark:text-custom-dark-white text-md  order-3 mr-4 md:mr-0 md:w-1/2 md:mt-20 ">
-          {" "}
-          /* You are one step closer to creating something amazing together! */{" "}
+        {"/*"} You are one step closer to creating something amazing together! {"*/"}
         </p>
         <div className="flex w-40 justify-between mt-4 order-4">
           <a href="https://github.com/jesicayu" target="_blank">
-            <GrGithub size={36} className="fill-custom-black dark:fill-custom-dark-white"/>
+            <GrGithub
+              size={36}
+              className="fill-custom-black dark:fill-custom-dark-white"
+            />
           </a>
           <a href="https://www.linkedin.com/in/jesica-yu/" target="_blank">
-            <GrLinkedin size={36} className="fill-custom-black dark:fill-custom-dark-white"/>
+            <GrLinkedin
+              size={36}
+              className="fill-custom-black dark:fill-custom-dark-white"
+            />
           </a>
           <a
             href="https://drive.google.com/file/d/17rATEnUgBMVAUVR_WxBnTJUXBTk4NrJK/view?usp=share_link"
             target="_blank"
           >
-            <BsFillPersonLinesFill size={36} className="fill-custom-black dark:fill-custom-dark-white" />
+            <BsFillPersonLinesFill
+              size={36}
+              className="fill-custom-black dark:fill-custom-dark-white"
+            />
           </a>
         </div>
       </div>
@@ -47,7 +55,9 @@ const Contact = () => {
           className="flex flex-col text-xl"
         >
           <div className="flex border-custom-black dark:border-custom-dark-white border-b-2 ">
-            <label className="my-1 mx-2 text-custom-black dark:text-custom-dark-white ">NAME:</label>
+            <label className="my-1 mx-2 text-custom-black dark:text-custom-dark-white ">
+              NAME:
+            </label>
             <input
               className="w-full text-custom-black dark:text-custom-dark-white bg-custom-base dark:bg-custom-dark-base font-extralight focus:outline-none focus:bg-custom-orange/50"
               type="text"
@@ -56,7 +66,9 @@ const Contact = () => {
             />
           </div>
           <div className="flex  border-custom-black dark:border-custom-dark-white border-b-2">
-            <label className="my-1 mx-2 text-custom-black dark:text-custom-dark-white ">EMAIL: </label>
+            <label className="my-1 mx-2 text-custom-black dark:text-custom-dark-white ">
+              EMAIL:{" "}
+            </label>
             <input
               className="w-full text-custom-black dark:text-custom-dark-white bg-custom-base dark:bg-custom-dark-base font-extralight focus:outline-none focus:bg-custom-orange/50"
               type="email"
@@ -65,7 +77,9 @@ const Contact = () => {
             />
           </div>
           <div className="flex border-custom-black dark:border-custom-dark-white">
-            <label className="my-1 mx-2 text-custom-black dark:text-custom-dark-white ">MESSAGE: </label>
+            <label className="my-1 mx-2 text-custom-black dark:text-custom-dark-white ">
+              MESSAGE:{" "}
+            </label>
             <textarea
               rows="12"
               name="message"

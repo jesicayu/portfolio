@@ -41,7 +41,7 @@ const Skills = () => {
       <div id="skills" className="scroll-my-32 w-full mb-10 md:mb-20">
         <div className="flex flex-col-reverse ml-4 md:ml-0 md:flex-row md:items-end md:justify-center ">
           <p className="font-extralight italic text-md text-custom-black dark:text-custom-dark-white md:text-2xl md:w-1/6 md:text-right ">
-            /* current, but not limited to */{" "}
+            {"/*"} current, but not limited to {"*/"}
           </p>
           <div className="flex flex-col-reverse md:flex-row md:items-end">
           <p className="text-custom-black dark:text-custom-dark-white md:text-center text-6xl md:mx-8 md:text-7xl">

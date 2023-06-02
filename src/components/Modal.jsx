@@ -13,7 +13,7 @@ const Modal = ({toggleModal}) => {
         </div>
         <div className="w-full text-center space-y-4 mt-4 ">
           <p className="text-lg lg:text-xl mx-4 dark:text-custom-dark-white lg:mx-12">
-            While I'm a software developer today, in a past life I was an
+            While I&apos;m a software developer today, in a past life I was an
             architectural designer. I owe much of my core qualities in the
             professional realm to my training in a field that instilled
             resilience, creativity and analytical thinking.{" "}

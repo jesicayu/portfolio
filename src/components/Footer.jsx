@@ -11,7 +11,7 @@ const Footer = () => {
         </div>
         <p className="font-extralight text-custom-black dark:text-custom-dark-white md:w-1/2 ml-4">
           software developer solving problems with a systematic mindset and an
-          architect's eye for detail.
+          architect&apos;s eye for detail.
         </p>
       </div>
 

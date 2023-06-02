@@ -106,7 +106,7 @@ const Navbar = () => {
                 className="text-base
               uppercase tracking-widest text-custom-black dark:text-custom-dark-white"
               >
-                Let's connect
+                Let&apos;s connect
               </p>
               <div className="flex justify-between items-center pt-6">
                 <a href="https://github.com/jesicayu" target="_blank">
