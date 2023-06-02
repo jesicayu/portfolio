@@ -60,7 +60,7 @@ const Work = () => {
                         </span>
                       </div>
                       <Image
-                        src={`/../public/assets/${project.image}.png`}
+                        src={`/assets/${project.image}.png`}
                         width="150"
                         height="150"
                         alt="cover image"
