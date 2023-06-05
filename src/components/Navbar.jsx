@@ -21,7 +21,6 @@ const Navbar = () => {
    } else {
     document.documentElement.classList.remove('dark')
    }
-
   };
 
 
@@ -69,6 +68,7 @@ const Navbar = () => {
       </div>
 
       <div
+      onClick={() => setNav(false)}
         className={
           nav
             ? "fixed right-0 top-0 w-full h-screen dark:bg-custom-dark-orange/75 bg-custom-orange/75 md:hidden"
@@ -76,6 +76,7 @@ const Navbar = () => {
         }
       >
         <div
+          onClick={(e) => e.stopPropagation()}
           className={
             nav
               ? "fixed right-0 top-0 h-screen w-[75%] sm:w-[60%] md:w-[45%] bg-custom-base dark:bg-custom-dark-base pt-8 px-10 ease-in duration-500"
