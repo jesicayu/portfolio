@@ -25,7 +25,7 @@ const Modal = ({toggleModal}) => {
           </p>
           <span className="inline-block">
             <a
-              href="https://drive.google.com/file/d/1UXHxIqoNJSAD-MV6ZbsqhBNi8JmiAEL4/view?usp=sharing"
+              href="https://drive.google.com/file/d/1tp1O3Ryyj_RT_JV7CTMJzgRAjbO9PO5w/view?usp=sharing"
               target="_blank"
             >
               <NewPageArrow className="w-24 -rotate-90 mx-auto" />
