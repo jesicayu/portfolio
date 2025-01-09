@@ -1,6 +1,6 @@
 import React from "react";
 
-export const WorkArrow = ({ className }) => {
+export const ProjectArrow = ({ className }) => {
   return (
     <svg
       className={`stroke-custom-lilac fill-none stroke-[12px] ${className}`}

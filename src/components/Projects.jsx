@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { NewPageArrow } from "@/illustrations/NewPageArrow";
-import { workContent } from "@/text";
+import { projectContent } from "@/text";
 import { SkillsArrow } from "@/illustrations/SkillsArrow";
-const Work = () => {
+const Projects = () => {
   const [selected, setSelected] = useState(null);
 
   const toggle = (i) => {
@@ -21,17 +21,17 @@ const Work = () => {
     return topOffsets;
   };
 
-  const topOffsets = calculateTopOffsets(workContent.length);
+  const topOffsets = calculateTopOffsets(projectContent.length);
 
   return (
     <>
-      <div id="work" className="w-full scroll-mt-32 mb-10 md:mb-40">
+      <div id="projects" className="w-full scroll-mt-32 mb-10 md:mb-40">
         <div className="flex flex-col mr-4 ml-4 mt-12 md:items-start md:ml-12">
           <p className="text-custom-lilac text-4xl">002</p>
-          <p className="text-custom-black dark:text-custom-dark-white text-6xl mb-4 md:text-7xl">WORK</p>
+          <p className="text-custom-black dark:text-custom-dark-white text-6xl mb-4 md:text-7xl">PROJECTS</p>
         </div>
         <div className="relative z-10">
-          {workContent.map((project, i) => (
+          {projectContent.map((project, i) => (
             <div className="flex w-full"   key={i}>
               <div
                 className={`flex flex-col md:flex-row w-full ${
@@ -114,7 +114,7 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Projects;
 
 // ${
 //   i ===0 ? "relative top-1.5" : ""

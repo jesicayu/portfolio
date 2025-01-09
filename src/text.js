@@ -1,11 +1,11 @@
 export const aboutContent = [
   {
     title: "About",
-    text: "My background in architecture and UX did two crucial things: enhance my abilities as a full stack software developer and provide me with skills that many developers might not possess.\nIn architecture, I was trained to think critically and creatively to solve complex problems while dealing with multi-layered systems. Being meticulous with my work and anticipating how a small change in the system might affect the other parts was second nature. As a result, I approach development with thoroughness and precision, striving to create organized and maintainable code.\nMeanwhile, my experience in UX enabled me to take a holistic approach to design and consider the broader context of users' goals before diving into details. This sensibility combined with my ability to communicate my ideas visually through sketches and collaborate with professionals from other disciplines proved to be essential skills that shaped me into a better programmer.",
+    text: "Hello! I'm full-stack software developer with a deep curiosity for understanding how things work - whether it's diving into npm dependency resolution or tracing the intricate flow of processes in Laravel’s queue system. The drive to go beyond surface level has allowed me to become a versatile and adaptable developer. \n My journey into software development has been enriched by my background in architecture and UX. Architecture taught me to anticipate how small changes can impact entire systems, while UX emphasized understanding the broader context of users’ goals before diving into details. Today, I thrive in evolving environments, building scalable systems, optimizing user experiences, and streamlining processes. \n Looking ahead, I’m eager to bring this versatility and curiosity to a team committed to making an objectively positive impact on human lives, prioritizing solutions that are unambiguously good—making a genuine difference.",
   },
 ];
 
-export const workContent = [
+export const projectContent = [
   {
     title: "broken office",
     type: "repair service",

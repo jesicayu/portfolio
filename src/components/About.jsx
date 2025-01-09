@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { PhotoArrow } from "@/illustrations/PhotoArrow";
-import { WorkArrow } from "@/illustrations/WorkArrow";
+import { ProjectArrow } from "@/illustrations/ProjectArrow";
 import { aboutContent } from "@/text";
 import { GrGithub, GrLinkedin } from "react-icons/gr";
 import { BsFillPersonLinesFill } from "react-icons/bs";
@@ -13,7 +13,7 @@ const About = () => {
         <div className="hidden md:flex flex-col items-center mt-20">
           <PhotoArrow className="h-40 rotate-90 ml-16" />
           <p className="text-custom-orange dark:text-custom-dark-orange italic text-2xl text-right ml-12">
-            {"/*"} currently learning Typescript, Next and Data structures {"*/"}
+            {"/*"} currently learning Data structures & Algorithms {"*/"}
           </p>
         </div>
         <Image
@@ -28,7 +28,7 @@ const About = () => {
       </div>
       <div className="flex justify-end items-center">
         <div className="hidden md:block md:w-96">
-          <WorkArrow />
+          <ProjectArrow />
         </div>
         <div className="flex flex-col items-start mt-4 mr-4 ml-4 md:items-end md:mr-12 md:ml-16">
           <p className="text-custom-lilac text-4xl">001</p>

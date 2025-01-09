@@ -26,7 +26,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: "about" },
-    { name: "work" },
+    { name: "projects" },
     { name: "skills" },
     { name: "contact" },
   ];
