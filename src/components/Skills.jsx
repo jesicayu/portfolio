@@ -11,13 +11,18 @@ import {
   SiTypescript,
   SiSocketdotio,
   SiMui,
-  SiLaravel
+  SiLaravel,
+  SiVuedotjs,
+  SiDocker, 
+  SiPostman
 } from "react-icons/si";
+
+import {FaAws} from "react-icons/fa"
 
 import {IoLogoJavascript} from "react-icons/io";
 
 const Skills = () => {
-  const icons = ["SiPostgresql", "SiSequelize","SiMongodb", "SiNodedotjs","SiExpress", "SiLaravel", "SiReact", "SiRedux", "IoLogoJavascript", "SiTypescript", "SiTailwindcss","SiMui", "SiSocketdotio"];
+  const icons = ["SiPostgresql", "SiSequelize","SiMongodb", "SiNodedotjs","SiExpress", "SiLaravel", "SiReact", "SiRedux", "IoLogoJavascript", "SiTypescript", "SiTailwindcss","SiMui", "SiSocketdotio", "FaAws", "SiVuedotjs", "SiDocker", "SiPostman"];
 
   const iconComponents = {
     SiPostgresql: SiPostgresql,
@@ -32,7 +37,11 @@ const Skills = () => {
     SiTypescript:SiTypescript,
     SiTailwindcss: SiTailwindcss,
     SiMui:SiMui,
-    SiSocketdotio:SiSocketdotio
+    SiSocketdotio:SiSocketdotio,
+    SiVuedotjs: SiVuedotjs,
+    FaAws: FaAws,
+    SiDocker: SiDocker,
+    SiPostman: SiPostman
   };
 
 
@@ -44,7 +53,7 @@ const Skills = () => {
             {"/*"} current, but not limited to {"*/"}
           </p>
           <div className="flex flex-col-reverse md:flex-row md:items-end">
-          <p className="text-custom-black dark:text-custom-dark-white md:text-center text-6xl md:mx-8 md:text-7xl">
+          <p className="text-custom-black dark:text-custom-dark-white md:text-center text-6xl md:mx-8 md:text-7xl z-10">
             SKILLS
           </p>
           <p className="text-custom-lilac text-4xl ">003</p>
