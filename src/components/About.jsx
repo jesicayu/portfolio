@@ -50,7 +50,7 @@ const About = () => {
               <GrLinkedin size={36} className="fill-custom-black dark:fill-custom-dark-white"/>
             </a>
             <a
-              href="https://drive.google.com/file/d/17rATEnUgBMVAUVR_WxBnTJUXBTk4NrJK/view?usp=share_link"
+              href="https://drive.google.com/file/d/1URJA3GwPGK8w645mb0eJ1MXxbwdmaSB-/view?usp=drive_link"
               target="_blank"
             >
               <BsFillPersonLinesFill size={36} className="fill-custom-black dark:fill-custom-dark-white"/>
